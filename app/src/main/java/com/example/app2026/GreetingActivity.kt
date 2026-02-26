@@ -1,0 +1,16 @@
+package com.example.app2026
+
+import android.os.Bundle
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
+class GreetingActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_greeting)
+
+        val name = intent.getStringExtra("USER_NAME")
+        val tvGreeting = findViewById<TextView>(R.id.tvGreeting)
+        tvGreeting.text = "¡Hola, $name!"
+    }
+}
